@@ -47,6 +47,9 @@ public class Library {
 
     private Book searchBook(String name){
         for (Book book : books) {
+            if(book == null){
+                throw new RuntimeException("В библиотеке нет книги с названием " + name);
+            }
             if(book.getName().equals(name)){
                 return book;
             }
