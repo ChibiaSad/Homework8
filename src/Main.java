@@ -2,7 +2,7 @@ import java.util.Arrays;
 
 public class Main {
     public static void main(String[] args) {
-        //minimal
+        //minimal difficulty
         Author author1 = new Author("George R.R.", "Martin");
         Book book1 = new Book("Game of Thrones", author1, 1996);
         Book book2 = new Book("A Knight of the Seven Kingdoms", author1, 1997);
@@ -10,7 +10,7 @@ public class Main {
         book2.setYear(1998);
         System.out.printf("Книга %s, автором которой является %s, была написана в %d году\n\n", book2.getName(), book2.getAuthor().toString(), book2.getYear());
 
-        //middle
+        //middle difficulty
         Book[] books = {book1, book2};
         Author author2 = new Author("Stephen", "King");
         Book book3 = new Book("The Stand", author2, 1978);
@@ -21,7 +21,7 @@ public class Main {
 
         printAllLibrary(books);
 
-        //hard
+        // hard difficulty
         System.out.println();
         Library library = new Library(3);
         library.addBook(book1);

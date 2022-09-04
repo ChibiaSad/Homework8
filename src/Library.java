@@ -9,12 +9,19 @@ public class Library {
     }
 
     public void printAllLibrary() {
+        printSeparator();
         for (Book book : books) {
             if(book == null){
+                printSeparator();
                 return;
             }
             System.out.printf("%s: %s: %d\n", book.getAuthor().toString(), book.getName(), book.getYear());
         }
+        printSeparator();
+    }
+
+    private void printSeparator(){
+        System.out.println("-------------------------------------------------------------");
     }
 
     public void addBook(Book book){
